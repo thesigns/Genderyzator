@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "NotoEmoji";
+    src: url("../fonts/NotoEmoji.ttf") format("truetype")
+  }
+
+body {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 770px;
+    margin: 25px auto 10px auto;
+    padding: 0 50px;
+}
+
+header {
+    font-family: 'Alegreya', serif;
+    color: hsl(350, 80%, 40%);
+    margin-bottom: 0px;
+}
+
+header h1 {
+    font-size: 44pt;
+    font-weight: 800;
+    margin: 0;
+    line-height: 0.9em;
+    text-align: left;
+}
+
+header p {
+    font-size: 24pt;
+    line-height: 1em;
+    margin: 12px 0 0 0;
+    text-align: left;
+    font-weight: 400;
+}
+
+div {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+}
+
+section.help {
+    position: relative;
+    width: 35px;
+
+}
+
+section.help::before {
+    content: "?";
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 0 -4px 8px 0;
+    border: 1px solid hsl(350, 60%, 60%);
+    border-radius: 125px;
+    background-color: hsl(350, 20%, 95%);
+    user-select: none;
+    font-size: 21px;
+    transition: 0.5s all;
+	font-weight: 600;
+    z-index: 111;
+
+}
+
+section.help:hover::before {
+    background-color: hsl(350, 40%, 85%);
+    /* transform: scale(1.6);
+    z-index: 111;
+    position: relative;
+    border-width: 5px;
+    width: 32px;
+    height: 32px; */
+
+}
+
+section.help p {
+
+    font-weight: 500;
+    line-height: 1.6em;
+    font-size: 12pt;
+    margin: 0;
+    display: block;
+    width: 660px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 35px;
+    top: 0;
+    opacity: 0;
+    background-color: hsl(350, 20%, 95%);
+    border: 1px solid hsl(350, 60%, 60%);
+    border-radius: 6px;
+    padding: 18px;
+    transition: 0.5s all;
+    width: 0;
+
+    opacity: 1;
+    height: auto;
+    top: 35px;
+    width: 660px;
+    z-index: 11;
+    opacity: 0;
+    transition: 0.5s all;
+    /* height: 0;
+    padding: 0; */
+    /* border-width: 0; */
+    overflow: hidden;
+    /* font-size: 1pt; */
+    z-index: 1;
+    /* box-shadow: 2px 2px 1px 0px #000;
+    transform: rotate(0) translateY(0) translateX(350px) scaleX(0); */
+    /* transform: scale(0); */
+    display: none;
+}
+
+section.help:hover p {
+    /* transform: scale(1); */
+    display: block;
+    /* transform: rotate(-1deg) translateY(1px) translateX(2px) scaleX(1);
+    font-size: 12pt; */
+    width: 660px;
+    height: auto;
+    padding: 18px;
+    border-width: 1px;
+    display: block;
+    /* /* transition-delay: 0.2s; */
+    opacity: 1;
+    /* border-width: 10px;
+    box-shadow: 5px 5px 21px 0px #999;
+    border-radius: 19px; */
+}
+
+
+
+
+textarea {
+    width: 100%;
+    padding: 20px;
+    height: 290px;
+    line-height: 1.7em;
+    font-size: 14pt;
+    background-color: #fff;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    border-width: 1px;
+}
+
+textarea + p {
+    margin: 20px 0 5px 0;
+}
+
+button {
+    font-family: 'NotoEmoji', sans-serif;
+    font-size: 32pt;
+    min-width: 100px;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 10px;
+    color: #000;
+    border-color: hsl(350, 50%, 60%);
+    background-color: hsl(350, 40%, 80%);
+    border-radius: 6px;
+    user-select: none;
+    transition: 0.5s all;
+
+    border: 1px solid hsl(350, 60%, 60%);
+    border-radius: 10px;
+    background-color: hsl(350, 20%, 95%);
+}
+
+button:hover {
+    background-color: hsl(350, 60%, 62%);
+    background-color: hsl(350, 40%, 85%);
+}
+
+p.output {
+    font-weight: 400;
+    line-height: 1.7em;
+    font-size: 14pt;
+    margin-bottom: 30px;
+}
+
+footer {
+    width: 100%;
+    border-top: 1px solid #888;
+    padding-top: 10px;
+    font-size: 10pt;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+
+    body {
+        max-width: none;
+        padding: 0 35px;
+        margin-top: 20px;
+    }
+
+    header {
+        margin-bottom: 5px;
+    }
+
+    header h1 {
+        font-size: 36pt;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 19pt;
+        line-height: 1.1em;
+    }
+
+    button {
+        font-size: 22pt;
+        min-width: 70px;
+    }
+
+    section.help:hover p {
+        width: 70vw !important;
+        height: auto;
+        font-size: 12pt;
+    }
+
+    textarea {
+        font-size: 13pt;
+        padding: 10px;
+        line-height: 1.5em;
+    }
+
+    p.output {
+        font-size: 13pt;
+        line-height: 1.5em;
+    }
+
+    header + p::before {
+        margin: 56px 0 120px 30px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    header + p::before {
+
+        font-size: 80pt;
+    }
+
+    section.help p {
+        width: 70vw !important;
+        line-height: 1.4em;
+    }
+
+    body {
+        max-width: none;
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+
+}
