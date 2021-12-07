@@ -73,13 +73,6 @@ section.help::before {
 
 section.help:hover::before {
     background-color: hsl(350, 40%, 85%);
-    /* transform: scale(1.6);
-    z-index: 111;
-    position: relative;
-    border-width: 5px;
-    width: 32px;
-    height: 32px; */
-
 }
 
 section.help p {
@@ -110,33 +103,19 @@ section.help p {
     z-index: 11;
     opacity: 0;
     transition: 0.5s all;
-    /* height: 0;
-    padding: 0; */
-    /* border-width: 0; */
     overflow: hidden;
-    /* font-size: 1pt; */
     z-index: 1;
-    /* box-shadow: 2px 2px 1px 0px #000;
-    transform: rotate(0) translateY(0) translateX(350px) scaleX(0); */
-    /* transform: scale(0); */
     display: none;
 }
 
 section.help:hover p {
-    /* transform: scale(1); */
     display: block;
-    /* transform: rotate(-1deg) translateY(1px) translateX(2px) scaleX(1);
-    font-size: 12pt; */
     width: 660px;
     height: auto;
     padding: 18px;
     border-width: 1px;
     display: block;
-    /* /* transition-delay: 0.2s; */
     opacity: 1;
-    /* border-width: 10px;
-    box-shadow: 5px 5px 21px 0px #999;
-    border-radius: 19px; */
 }
 
 
